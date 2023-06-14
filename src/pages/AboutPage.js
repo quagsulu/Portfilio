@@ -1,10 +1,16 @@
+import { useEffect, useState } from "../lib";
 import Header from "../components/Header";
+import About from "../components/about";
+import Switcher from "../components/switcher";
 
 const AboutPage = () => {
     return `
-        <div class="container max-w-4xl mx-auto px-4">
-            ${Header()}
-        </div>
+    ${Header()} 
+    <div class="main-content">
+            ${About()}
+</div>
+</div>
+        ${Switcher()}
     `;
 };
 export default AboutPage;

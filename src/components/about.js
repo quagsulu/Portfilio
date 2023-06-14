@@ -1,4 +1,18 @@
-const About = () => {
+import { useEffect, useState } from "../lib";
+const About = () => { 
+    const [Post, setPost] = useState([]);
+    const [profile, setprofile] = useState([]);
+    useEffect(() =>{
+        fetch(`${import.meta.env.VITE_API_URI}/posts`)
+        .then((respone) => respone.json())
+        .then((data) => setPost(data));
+    },[]);
+    useEffect(() =>{
+        fetch(`${import.meta.env.VITE_API_URI}/profile/1`)
+        .then((respone) => respone.json())
+        .then((data) => setprofile(data));
+    },[]);
+
     return `
     <!-- === About session start -->
     <section class="about section" id="about">
@@ -28,28 +42,25 @@ const About = () => {
                         <div class="personal-info padd-15">
                             <div class="row">
                                 <div class="info-item padd-15">
-                                    <p> Birth Day : <span>19 / 11 / 2003</span></p>
+                                    <p> Birth Day : <span>${profile.birthday}</span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> Age : <span>20</span></p>
+                                    <p> Age : <span>${profile.age}</span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> Age : <span>20</span></p>
+                                    <p> Email : <span>${profile.email}</span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> Email : <span>quagsulu1911@gmail.com</span></p>
+                                    <p> Phone : <span>${profile.phone} </span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> Phone : <span>0981896360 </span></p>
+                                    <p> Phone : <span>${profile.phone} </span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> Phone : <span>0981896360 </span></p>
+                                    <p> City : <span>${profile.city}</span></p>
                                 </div>
                                 <div class="info-item padd-15">
-                                    <p> City : <span>Thanh Hoa</span></p>
-                                </div>
-                                <div class="info-item padd-15">
-                                    <p> Freelnace : <span>Availible</span></p>
+                                    <p> School : <span>${profile.school}</span></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -109,53 +120,27 @@ const About = () => {
                                 <div class="timeline-box padd-15">
                                     <div class="timeline shadow-dark padd-15">
                                         <!-- === timline item -->
+                                        ${Post
+                                            .map((Post) =>{
+                                                if(Post.categories == 1) {
 
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
-
+                                                    return `
+                                                    <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                <h3 class="timeline-date">
+                                                    <i class="fa fa-calendar"></i> 2013 - 2015
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                    ${Post.title}
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                    ${Post.description}
+                                                    </p>
+                                                    </div>
+                                                    `
+                                                }
+                                            }).join('')}
+                                            
                                     </div>
                                 </div>
                             </div>
@@ -168,52 +153,26 @@ const About = () => {
                                 <div class="timeline-box padd-15">
                                     <div class="timeline shadow-dark padd-15">
                                         <!-- === timline item -->
-
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
+                                        ${Post
+                                            .map((Post) =>{
+                                                if(Post.categories == 2){
+                                                    return `
+                                                    <div class="timeline-item">
+                                                <div class="circle-dot"></div>
+                                                <h3 class="timeline-date">
                                                 <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot"></div>
-                                            <h3 class="timeline-date">
-                                                <i class="fa fa-calendar"></i> 2013 - 2015
-                                            </h3>
-                                            <h4 class="timeline-title">
-                                                Master in Computer Science
-                                            </h4>
-                                            <p class="timeline-text">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                Explicabo, itaque, eligendi nostrum fuga accusamus molestias
-                                                maxime nobis eum fugiat corrupti quaerat excepturi veniam
-                                                provident culpa.
-                                            </p>
-                                        </div>
+                                                </h3>
+                                                <h4 class="timeline-title">
+                                                ${Post.title}
+                                                avd
+                                                </h4>
+                                                <p class="timeline-text">
+                                                ${Post.description}
+                                                </p>
+                                                </div>
+                                                `
+                                            }
+                                            }).join('')}
 
                                     </div>
                                 </div>

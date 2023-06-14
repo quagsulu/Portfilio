@@ -59,7 +59,9 @@ ul {
     z-index: 0; */
 
 }
-
+.w-100pt{
+    width: 100%;
+}
 .hidden {
     display: none !important;
 }

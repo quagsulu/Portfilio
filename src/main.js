@@ -1,75 +1,52 @@
+// import Navigo from "navigo";
+import { render, router } from "./lib";
 import HomePage from "./pages/HomePage";
-// import HomePage from "./pages/HomePage";
-// import HomePage from "./pages/HomePage";
-// import HomePage from "./pages/HomePage";
-// import HomePage from "./pages/HomePage"; 
-
+import AboutPage from "./pages/AboutPage";
+import ServicePage from "./pages/ServicePage";
+import PortfolioPage from "./pages/PortfolioPage";
+import ContactPage from "./pages/ContactPage";
+import AdminPage from "./pages/admin/admin";
+import PostAdd from "./pages/admin/Post/PostAdd";
+import PostList from "./pages/admin/Post/PostList";
+import PostEdit from "./pages/admin/Post/PostEdit";
+import ProFileEdit from "./pages/admin/profile/profileEdit";
+import projectDetail from "./pages/projectDetail";
+import projectAdd from "./pages/admin/project/projectAdd";
+import ProjectList from "./pages/admin/project/projectList";
+import projectEdit from "./pages/admin/project/projectEdit";
 const app = document.querySelector("#app");
+// app.innerHTML = HomePage();
+router.on("/", () => render(HomePage, app));
+router.on("/about", () => render(AboutPage, app));
+router.on("/service", () => render(ServicePage, app));
+router.on("/portfolio", () => render(PortfolioPage, app));
+router.on("/contact", () => render(ContactPage, app));
+// admin routes
+router.on("/admin", () => render(AdminPage, app));
+router.on("/admin/profile/edit", () => render(ProFileEdit, app));
+
+router.on("/admin/posts/add", () => render(PostAdd, app));
+router.on("/admin/posts/list", () => render(PostList, app));
+router.on("/admin/posts/:id/edit",({ data }) => render(() => PostEdit(data), app));
+// project
+router.on("/project/:id",({ data }) => render(() => projectDetail(data), app));
+router.on("/admin/project/add", () => render(projectAdd, app));
+router.on("/admin/project/list", () => render(ProjectList, app));
+router.on("/admin/project/:id/edit",({ data }) => render(() => projectEdit(data), app));
 
 
-app.innerHTML = HomePage();
-var typed = new Typed(".typing", {
-    strings:["Student", "Web Developer", "A Man", "Ahihi"],
-    typeSpeed:100,
-    BackSpeed:60,
-    loop:true 
-}  );
-console.log(1);
+router.resolve();
 
 
-// // == toggler style switcher
-const styleSwitcherToggle  = document.querySelector(".style-switcher-toggler");
-styleSwitcherToggle.addEventListener("click",() => {
-    document.querySelector(".style-switcher").classList.toggle("open");
-});
-// hide style switcher scroll 
-window.addEventListener('scroll',() => {
-    if(document.querySelector('.style-switcher').classList.contains("open")) {
-    document.querySelector('.style-switcher').classList.remove("open");
-    }
-});
 
-// 
-const alternate = document.querySelectorAll(".alternate-style");
-const colorweb = document.querySelectorAll("#color-web");
-// function setActiveStyle(color) {
-//     alternate.forEach((style) => {
-//         if(color == style.getAttribute("title")) {
-//             style.removeAttribute("disabled");
-//         }
-//         else {
-//             style.setAttribute("disabled", "true");
-//         }
-//     })
-// }
-colorweb.forEach((color) => {
-    color.addEventListener("click",() => {
 
-        alternate.forEach((style) => {
-            if(color.getAttribute("class") == style.getAttribute("title")) {
-                style.removeAttribute("disabled");
-            } 
-            else {
-                style.setAttribute("disabled", "true");
-            }
-        })
-    });
 
-})
-// test 
-// console.log(document.querySelector("#app").getAttribute('class') == document.querySelector("#app").getAttribute('title')); 
 
-//  dark style and light style switcher
-const dayNight = document.querySelector(".day-night");
-dayNight.addEventListener("click", () => {
-    dayNight.querySelector("i").classList.toggle("fa-sun");
-    dayNight.querySelector("i").classList.toggle("fa-moon");
-     document.body.classList.toggle("dark");
-});
-window.addEventListener("load",() => {
-    if(document.body.classList.contains("dark")) {
-        dayNight.querySelector('i').classList.add("fa-sun");
-    } else {
-        dayNight.querySelector('i').classList.add("fa-moon");
-    }
-});
+
+
+
+
+
+
+
+

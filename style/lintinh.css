@@ -1,0 +1,124 @@
+.form-ma{
+    height: 800px;
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+}
+
+.form-post
+{
+    padding: 25px;
+    border: 1px solid var(--bg-black-50);
+    width: 50%;
+    /* height: 50%; */
+    /* text-align: center; */
+    margin: auto;
+}
+.btn-submit
+{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 35px;
+    background: red;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    /* background-color: ; */
+    transition: all 0.3 ease;
+    border: none;
+}
+.title-form-post 
+{
+    text-align: center;
+    margin: 5px auto 25px;
+}
+.group-input 
+{
+    margin: 15px auto;
+}
+.group-input>input
+{
+    font-size: 20px;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    
+}
+.group-input select
+{
+width: 50%;
+border-radius: 10px; 
+height: 30px;
+text-align: center;
+}
+.group-input textarea
+{
+    height: 150px;
+padding: 15px;
+font-size: 18px;
+}
+.post-list
+{
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* project detail */
+.project-detail
+{
+    margin: 0 auto;
+    padding: 40px;
+    height: 600px;
+    border: 1px solid var(--bg-black-50);
+    width: 85%;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    /* display: f; */
+}
+.app 
+{
+    padding: 30px;
+}
+
+.title-project
+{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
+    font-size: 24px;
+    color: var(--skin-color);
+
+}
+.img {
+    max-width: 45%;
+    margin: 0 10px 0 0 ;
+}
+.img img{
+    width: auto;
+    height: auto;
+}
+.content-project
+{
+    display: flex;
+}
+.content-detail
+{
+padding: 20px;
+max-width: 90%;
+}
+.group-content
+{
+margin: 0px  0px 15px 0px;
+}
+.group-content p 
+{
+    font-size: 18px;
+    font-weight: 1000;
+}
+
+.group-content p>span
+{
+    font-weight: 500;
+}

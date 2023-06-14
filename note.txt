@@ -3,4 +3,45 @@ Bước 2: Sử dụng npm cài đặt vitejs và tạo project
     npm create vite@latest we18102 -- --template vanilla
 Bước 3: Truy cập vào thư mục we18102 vừa tạo
     cd we18102 
-    code .
+    code . 
+
+//----------------------------------------------------------------
+Collection "Personal":
+
+name: Tên của bạn.
+position: Vị trí công việc hiện tại của bạn.
+description: Mô tả ngắn về bản thân.
+email: Địa chỉ email của bạn.
+phone: Số điện thoại liên hệ.
+address: Địa chỉ của bạn.
+Collection "Projects":
+
+title: Tiêu đề dự án.
+description: Mô tả dự án.
+role: Vai trò của bạn trong dự án.
+images: Mảng chứa đường dẫn tới hình ảnh của dự án (nếu có).
+links: Mảng chứa các liên kết đến dự án (nếu có).
+start_date: Ngày bắt đầu dự án.
+end_date: Ngày kết thúc dự án.
+Collection "Skills":
+
+name: Tên kỹ năng.
+category: Phân loại kỹ năng (ví dụ: Lập trình, Thiết kế, Quản lý dự án).
+Collection "Education":
+
+degree: Bằng cấp hoặc chứng chỉ.
+institution: Tên trường học hoặc tổ chức.
+major: Ngành học.
+start_date: Ngày bắt đầu học.
+end_date: Ngày kết thúc học.
+Collection "Experience":
+
+company: Tên công ty.
+position: Vị trí công việc.
+description: Mô tả nhiệm vụ và trách nhiệm.
+start_date: Ngày bắt đầu làm việc.
+end_date: Ngày kết thúc làm việc.
+Collection "Testimonials":
+
+name: Tên người gửi phản hồi.
+content: Nội dung phản hồi.

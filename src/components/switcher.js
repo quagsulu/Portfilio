@@ -16,7 +16,7 @@ const Switcher = () => {
             <span class="color-4" id="color-web" ></span>
             <span class="color-5" id="color-web" ></span>
         </div>
-    </div>
+    </div> 
     <!-- === style switcher end  -->
     `;
 };

@@ -1,4 +1,11 @@
+import { useEffect , useState ,router} from "../lib";
 const Portfolio = () => {
+    const [project, setproject] = useState([]);
+    useEffect(() =>{
+        fetch(`${import.meta.env.VITE_API_URI}/projects`)
+        .then((respone) => respone.json())
+        .then((data) => setproject(data));
+    },[]);
     return `
     <!-- === Portfolio section start -->
     <section class="portfolio section" id="portfolio">
@@ -14,60 +21,22 @@ const Portfolio = () => {
                 </div>
             </div>
             <div class="row">
+            ${project.map(project => {
+                return `
                 <!-- == portfolio item start  -->
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-1.jpg" alt="">
+                           <a href="#/project/${project.id}"> <img src="${project.image}" alt="">
                         </div>
                     </div>
                 </div>
                 <!-- == portfolio item end  -->
-                <!-- == portfolio item start  -->
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- == portfolio item end  -->
-                <!-- == portfolio item start  -->
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- == portfolio item end  -->
-                <!-- == portfolio item start  -->
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- == portfolio item end  -->
-                <!-- == portfolio item start  -->
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- == portfolio item end  -->
-                <!-- == portfolio item start  -->
-                <div class="portfolio-item padd-15">
-                    <div class="portfolio-item-inner shadow-dark">
-                        <div class="portfolio-img">
-                            <img src="./images/portfolio/portfolio-6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- == portfolio item end  -->
+                `; 
+            }
+            
+            ).join("")}
+
             </div>
         </div>
     </section>

@@ -1,0 +1,133 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Dự án mẫu",
+      "description": "Đây là website dự án mẫu do nhóm một thực hiện làm vào khoảng một tháng trước",
+      "image": "./images/portfolio/portfolio-1.jpg",
+      "skills": "HTMLCSS JavaScript MongoDB",
+      "endDate": "2023-05-30",
+      "startDate": "2023-03-15",
+      "url": "https://myportfolio.com",
+      "github": "https://github.com/myportfolio",
+      "teamMembers": "John Doe Jane Smith"
+    },
+    {
+      "id": 2,
+      "title": "Dự án mẫu",
+      "description": "A portfolio website showcasing my projects and skills.",
+      "image": "./images/portfolio/portfolio-2.jpg",
+      "skills": "HTMLCSS JavaScript MongoDB",
+      "completionDate": "2023-05-30",
+      "startDate": "2023-03-15",
+      "url": "https://myportfolio.com",
+      "github": "https://github.com/myportfolio",
+      "teamMembers": "John Doe Jane Smith"
+    },
+    {
+      "id": 3,
+      "title": "Dự án mẫu",
+      "description": "A portfolio website showcasing my projects and skills.",
+      "image": "./images/portfolio/portfolio-3.jpg",
+      "skills": "HTMLCSS JavaScript MongoDB",
+      "completionDate": "2023-05-30",
+      "startDate": "2023-03-15",
+      "url": "https://myportfolio.com",
+      "github": "https://github.com/myportfolio",
+      "teamMembers": "John Doe Jane Smith"
+    },
+    {
+      "id": 4,
+      "title": "Dự án mẫu",
+      "description": "A portfolio website showcasing my projects and skills.",
+      "image": "./images/portfolio/portfolio-4.jpg",
+      "skills": "HTMLCSS JavaScript MongoDB",
+      "completionDate": "2023-05-30",
+      "startDate": "2023-03-15",
+      "url": "https://myportfolio.com",
+      "github": "https://github.com/myportfolio",
+      "teamMembers": "John Doe Jane Smith"
+    },
+    {
+      "id": 5,
+      "title": "Dự án mẫu",
+      "description": "A portfolio website showcasing my projects and skills.",
+      "image": "./images/portfolio/portfolio-5.jpg",
+      "skills": "HTMLCSS JavaScript MongoDB",
+      "completionDate": "2023-05-30",
+      "startDate": "2023-03-15",
+      "url": "https://myportfolio.com",
+      "github": "https://github.com/myportfolio",
+      "teamMembers": "John Doe Jane Smith"
+    }
+  ],
+  "profile": [
+    {
+      "name": "Nguyễn Văn Quang12",
+      "age": "2000",
+      "phone": "0981896360",
+      "birthday": "19/11/20034",
+      "city": "thanh hóa",
+      "email": "admin@gmail.com",
+      "school": "FPT",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$F6LV5cIGhQBtF1EoXoNJce.I4A8zGojoDH0uEkgAWkMBVqEm2x40S",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "2"
+    },
+    {
+      "id": "2",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "2"
+    },
+    {
+      "id": "3",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "1"
+    },
+    {
+      "id": "4",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "2"
+    },
+    {
+      "id": "5",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "1"
+    },
+    {
+      "id": "6",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "1"
+    },
+    {
+      "id": "7",
+      "title": "Master in Computer Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "1"
+    },
+    {
+      "title": "n Compccccccccccuter Science",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, itaque, eligendi nostrum fuga accusamus molestias maxime nobis eum fugiat corrupti quaerat excepturi veniam provident culpa.",
+      "categories": "2",
+      "id": "F7EDYwd"
+    }
+  ]
+}
